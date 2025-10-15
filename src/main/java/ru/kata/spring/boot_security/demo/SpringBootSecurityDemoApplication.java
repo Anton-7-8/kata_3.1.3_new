@@ -42,7 +42,7 @@ public class SpringBootSecurityDemoApplication {
 		if (userTest1 == null) {
 			Set<Role> roleList = new HashSet<>();
 			roleList.add(roleService.findByName("ROLE_USER"));
-			User newUser = new User("user1", "user1@gmail.com", "1");
+			User newUser = new User("user1", "user1@gmail.com", "user");
 			newUser.setRoles(roleList);
 			userService.save(newUser);
 		}
@@ -51,7 +51,7 @@ public class SpringBootSecurityDemoApplication {
 		if (userTest2 == null) {
 			Set<Role> roleList = new HashSet<>();
 			roleList.add(roleService.findByName("ROLE_USER"));
-			User newUser = new User("user1", "user2@gmail.com", "1");
+			User newUser = new User("user2", "user2@gmail.com", "1");
 			newUser.setRoles(roleList);
 			userService.save(newUser);
 		}
